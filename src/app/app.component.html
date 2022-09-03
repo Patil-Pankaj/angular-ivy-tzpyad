@@ -1,0 +1,40 @@
+<table class="table" id="products">
+  <thead>
+    <tr>
+      <th
+        scope="col"
+        class="header-cell"
+        [appSort]="billing"
+        data-order="desc"
+        data-name="name"
+      >
+        Product Name
+      </th>
+      <th
+        scope="col"
+        class="header-cell"
+        [appSort]="billing"
+        data-order="desc"
+        data-name="price"
+      >
+        Price
+      </th>
+      <th
+        class="header-cell"
+        scope="col"
+        [appSort]="billing"
+        data-order="desc"
+        data-name="category"
+      >
+        Category
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of billing">
+      <td>{{ row.name }}</td>
+      <td>{{ row.price }}</td>
+      <td>{{ row.category }}</td>
+    </tr>
+  </tbody>
+</table>
